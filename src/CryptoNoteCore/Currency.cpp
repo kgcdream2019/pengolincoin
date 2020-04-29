@@ -150,10 +150,27 @@ bool Currency::getBlockReward(
   }
 
   uint64_t baseReward = (m_moneySupply - alreadyGeneratedCoins) >> emission;
+
   if (alreadyGeneratedCoins == 0 && m_genesisBlockReward != 0) {
     baseReward = m_genesisBlockReward;
   }
+  // //added for change block rewards.
+  // // hardfork date june 1 , block generation time 1 minutes, hardfork height  48312 + 24*60*35 = 98,712 ~= 100,000
+  // #define HARD_FORK_HEIGHT    100000
+  // if(blockHeight >= HARD_FORK_HEIGHT){
+  //   baseReward /= 4 ;
+  // }
+  // //
+  
+  //added for testing of block rewards change. 
+  // hardfork date june 1 , block generation time 1 minutes, hardfork height  48312 + 24*60*35 = 98,712 ~= 100,000
+  #define HARD_FORK_HEIGHT    10
+  if(blockHeight >= HARD_FORK_HEIGHT){
+    baseReward /= 4 ;
+  }
+  logger(TRACE) << "Block height " << blockHeight << "\t\tBlock rewards " << baseReward ;
 
+  //
   size_t blockGrantedFullRewardZone = blockGrantedFullRewardZoneByBlockVersion(blockMajorVersion);
   medianSize = std::max(medianSize, blockGrantedFullRewardZone);
   if (currentBlockSize > UINT64_C(2) * medianSize) {
