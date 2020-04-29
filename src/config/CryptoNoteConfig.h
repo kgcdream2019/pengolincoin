@@ -162,8 +162,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const uint64_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  17897;
-const int      RPC_DEFAULT_PORT                              =  17898;
+const int      P2P_DEFAULT_PORT                              =  14354;
+const int      RPC_DEFAULT_PORT                              =  14355;
 const int      SERVICE_DEFAULT_PORT                          =  8979;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
@@ -206,8 +206,8 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 };
 
 const char* const SEED_NODES[] = {
-	"78.46.222.91:17897", // vps
-	"116.203.254.18:17897", // ft4a
-    "116.203.178.152:17897" // clevery
+	"78.46.222.91:14354", // vps
+	"116.203.254.18:14354", // ft4a
+    "116.203.178.152:14354" // clevery
 };
 } 
