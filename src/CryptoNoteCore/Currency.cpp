@@ -168,8 +168,8 @@ bool Currency::getBlockReward(
   if(blockHeight >= HARD_FORK_HEIGHT){
     baseReward /= 4 ;
   }
-  std::cout << "Block height " << blockHeight
-            << "\t\tBlock rewards " << baseReward << "\n" ;
+  logger(Logging::INFO, Logging::BRIGHT_YELLOW) << "Block height " << blockHeight
+            << "\t\tBlock rewards " << baseReward << ;
 
   //
   size_t blockGrantedFullRewardZone = blockGrantedFullRewardZoneByBlockVersion(blockMajorVersion);
