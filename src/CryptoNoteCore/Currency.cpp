@@ -169,7 +169,7 @@ bool Currency::getBlockReward(
     baseReward /= 4 ;
   }
   logger(Logging::INFO, Logging::BRIGHT_YELLOW) << "Block height " << blockHeight
-            << "\t\tBlock rewards " << baseReward << ;
+            << "\t\tBlock rewards " << baseReward ;
 
   //
   size_t blockGrantedFullRewardZone = blockGrantedFullRewardZoneByBlockVersion(blockMajorVersion);
