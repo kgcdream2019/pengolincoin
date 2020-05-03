@@ -50,7 +50,7 @@ const uint64_t EMISSION_SPEED_FACTOR_V2_HEIGHT               = 900000;
 
 const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
 
-const char GENESIS_COINBASE_TX_HEX[]                         = "011401ff00010002a4686dc9345c4547c5cddf69ee38dc83998b10d492248ecb468b8fe2afbfbab82101e401a33148d2032a1040afc145c5f6b6ffedaa21d1ca487a32715abc9ee7a104";
+const char GENESIS_COINBASE_TX_HEX[]                         = "011401ff00010002e131f4a3fe28691100d2c6610f885c8cec72244bf2e2ee9e200975d432b258822101256ea3374b9e5db6b7bc5018b06ac380a701d7be673fe6e9ab7033d6a1599774";
 
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
